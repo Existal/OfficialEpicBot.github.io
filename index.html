@@ -67,28 +67,7 @@
 			<div class="about">
 				<img src="EB_real_transparent_black.png"/>
 				<h2>EpicBot</h2>
-				<!-- Add a placeholder for the Twitch embed -->
-				<div id="twitch-embed"></div>
-
-				<!-- Load the Twitch embed script -->
-				<script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-				<!-- Create a Twitch.Player object. This will render within the placeholder div -->
-				<script type="text/javascript">
-				  var embed = new Twitch.Embed("twitch-embed", {
-					width: 854,
-					height: 480,
-					channel: "epicbottt",
-					layout: "video",
-					autoplay: false,
-					parent: ['existal.github.io/epicbot']
-				  });
-				  
-				  embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-					var player = embed.getPlayer();
-					player.play();
-				  });
-				</script>
+				<iframe src="https://player.twitch.tv/?channel=sykkuno&parent=www.existal.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			</div>
 		</div>
