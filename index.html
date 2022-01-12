@@ -1,10 +1,102 @@
-<!DOCTYPE html>
+<DOCTYPE html>
+
+
 <html>
-  <head>
-    <title>Ben's Amazing Website</title>
-  </head>
-  <body>
-    <h1 style="text-align:center">This is for you Ben ;)</h1>
-    <img src="middle.jpg" alt="Middle Finger" style="height:750px; float:center">
-  </body>
+	<!--Head-->
+	<head>
+		<title>EpicBot's Website</title>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<!-- JavaScript Bundle with Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		
+		
+		<link href="main.css" rel="stylesheet">
+		
+		<!-- Add icon library -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<!--Body-->
+	<body>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="EB_real_transparent.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar2">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="collapsibleNavbar2">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About Me</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Profile</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" id="popUpWindow" data-toggle="modal">Login</a></li>
+								<li><a class="dropdown-item" id="popUpWindow2">Logout</a></li>
+								<li><a class="dropdown-item" id="popUpWindow3">Settings</a></li>
+							</ul>
+						</li>
+					</ul>
+					
+				</div>
+				<div class="navbar-name">
+					<a class="navbar-brand" href="#">EpicBot</a>
+				</div>
+			</div>
+		</nav>
+		
+		
+		<div class="header">
+			<h1>Hello! I am <span>EpicBot</span></h1>
+		</div>
+		
+		<div class="main" style="font-family:Roboto, sans-serif;">
+			<div class="about">
+				<img src="EB_real_transparent_black.png"/>
+				<h2>EpicBot</h2>
+				<!-- Add a placeholder for the Twitch embed -->
+				<div id="twitch-embed"></div>
+
+				<!-- Load the Twitch embed script -->
+				<script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+				<!-- Create a Twitch.Player object. This will render within the placeholder div -->
+				<script type="text/javascript">
+				  var embed = new Twitch.Embed("twitch-embed", {
+					width: 854,
+					height: 480,
+					channel: "epicbottt",
+					layout: "video",
+					autoplay: false,
+					parent: ['existal.github.io/epicbot']
+				  });
+				  
+				  embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+					var player = embed.getPlayer();
+					player.play();
+				  });
+				</script>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			</div>
+		</div>
+		
+		<footer>
+		    <span>
+				© <script type="text/javascript">document.write(new Date().getFullYear());</script> - EpicBot
+			</span>
+		</footer>
+	</body>
 </html>
